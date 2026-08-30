@@ -1,0 +1,28 @@
+name: deploy blog
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Jekyll
+        run: |
+          docker run --rm \
+            --user "$(id -u):$(id -g)" \
+            -e BUNDLE_PATH=/tmp/bundle \
+            -v "$PWD:/site" -w /site \
+            ruby:3.3 sh -c "bundle install --quiet && bundle exec jekyll build"
+
+      - name: Publicar no nginx
+        run: |
+          mkdir -p /home/calvet/Projetos/home_server_apps/blog/site
+          rsync -a --delete _site/ /home/calvet/Projetos/home_server_apps/blog/site/

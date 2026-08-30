@@ -1,0 +1,9 @@
+services:
+  web:
+    container_name: home-server-blog-web
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8095:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro

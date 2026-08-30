@@ -1,0 +1,14 @@
+# project
+_site
+site
+.jekyll-cache
+.sass-cache
+.vagrant
+vendor/
+
+# general
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+beautiful-jekyll-theme-*.gem
