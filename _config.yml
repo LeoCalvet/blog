@@ -47,7 +47,7 @@ share-links-active:
   vk: false
   reddit: false
 
-url-pretty: "localhost:8095"  # TODO: trocar pra blog.calvet.dev.br quando a rota do túnel existir
+url-pretty: "blog.calvet.dev.br"
 title-on-all-pages: true
 excerpt_length: 50
 feed_show_excerpt: true
@@ -86,7 +86,7 @@ date_format: "%d/%m/%Y"
 
 timezone: "America/Sao_Paulo"
 lang: pt-BR
-url: "http://localhost:8095"  # TODO: voltar pra https://blog.calvet.dev.br quando a rota do túnel existir
+url: "https://blog.calvet.dev.br"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:slug/
