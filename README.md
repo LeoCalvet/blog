@@ -1,6 +1,6 @@
 # blog — blog.calvet.dev.br
 
-Blog estático em Jekyll com o tema [Hitchens](https://github.com/patdryburgh/hitchens), paleta de cores [Flexoki](https://stephango.com/flexoki) e a fonte CaskaydiaCove Nerd Font.
+Blog estático em Jekyll com o tema [Beautiful Jekyll](https://beautifuljekyll.com), paleta de cores [Flexoki](https://stephango.com/flexoki) e a fonte CaskaydiaCove Nerd Font.
 
 ## Como funciona
 

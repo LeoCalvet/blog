@@ -1,54 +1,130 @@
-# Blog do Leonardo Calvet — blog.calvet.dev.br
-# Tema: Hitchens (https://github.com/patdryburgh/hitchens) — MIT, ver LICENSE.txt
-# Paleta: Flexoki (https://stephango.com/flexoki) aplicada em _sass/_variables.scss
+###########################################################
+### Blog do Leonardo Calvet — blog.calvet.dev.br
+### Tema: Beautiful Jekyll (https://beautifuljekyll.com)
+### Paleta: Flexoki (https://stephango.com/flexoki)
+### Fonte: CaskaydiaCove Nerd Font (a mesma do Zed do autor)
+###########################################################
 
+# Name of website
 title: Leonardo Calvet
-email: ola@calvet.dev.br
-description: >-
-  Ruby, home servers e o que mais eu estiver aprendendo.
-url: "http://localhost:8095"  # TODO: voltar pra https://blog.calvet.dev.br quando a rota do túnel existir
-lang: pt-BR
+
+# Your name to show in the footer
+author: Leonardo Calvet
+
+###############################################
+# --- List of links in the navigation bar --- #
+###############################################
+
+navbar-links:
+  Sobre: "sobre"
+  Tags: "tags"
+
+################
+# --- Logo --- #
+################
+
+#avatar: "/assets/img/avatar-icon.png"
+round-avatar: true
+
+#####################################
+# --- Footer social media links --- #
+#####################################
+
+social-network-links:
+  rss: true
+  github: LeoCalvet
+
+rss-description: Blog do Leonardo Calvet — Ruby, home servers e projetos pessoais
+
+###########################
+# --- General options --- #
+###########################
+
+share-links-active:
+  twitter: false
+  facebook: false
+  linkedin: true
+  vk: false
+  reddit: false
+
+url-pretty: "localhost:8095"  # TODO: trocar pra blog.calvet.dev.br quando a rota do túnel existir
+title-on-all-pages: true
+excerpt_length: 50
+feed_show_excerpt: true
+feed_show_tags: true
+post_search: true
+edit_page_button: true
+navbar-var-length: false
+keywords: "leonardo calvet, ruby, jekyll, home server, docker"
+
+######################################
+# --- Colours — paleta Flexoki --- #
+######################################
+# Flexoki light: papel #FFFCF0, superfície #F2F0E5, texto #100F0F, muted #6F6E69
+# acentos: blue #205EA6, cyan #24837B
+
+page-col: "#FFFCF0"
+text-col: "#100F0F"
+link-col: "#205EA6"
+hover-col: "#24837B"
+navbar-col: "#F2F0E5"
+navbar-text-col: "#100F0F"
+navbar-border-col: "#DEDEDB"
+footer-col: "#F2F0E5"
+footer-text-col: "#6F6E69"
+footer-link-col: "#100F0F"
+footer-hover-col: "#24837B"
+
+site-css:
+  - "/assets/css/flexoki.css"
+
+################
+# --- Misc --- #
+################
+
+date_format: "%d/%m/%Y"
+
 timezone: "America/Sao_Paulo"
-
-# menu do masthead (_data/menu.yml)
-
-twitter_username:
-github_username: LeoCalvet
-
+lang: pt-BR
+url: "http://localhost:8095"  # TODO: voltar pra https://blog.calvet.dev.br quando a rota do túnel existir
 markdown: kramdown
+highlighter: rouge
 permalink: /:year/:month/:day/:slug/
+paginate: 5
+
 kramdown:
   input: GFM
 
-paginate: 5
-paginate_path: "/page/:num/"
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+      social-share: true
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
 
-# Exclude from processing.
 exclude:
+  - CHANGELOG.md
+  - CNAME
   - Gemfile
   - Gemfile.lock
-  - hitchens-theme.gemspec
+  - LICENSE
   - README.md
   - AGENTS.md
   - compose.yaml
   - nginx
+  - screenshot.png
+  - beautiful-jekyll-theme.gemspec
   - site
   - _drafts
-  - LICENSE.txt
-
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-  - scope:
-      path: ""
-    values:
-      layout: page
 
 plugins:
   - jekyll-paginate
-
-# admonition para agentes: NÃO adicionar tema gem-based aqui; este repo
-# carrega o tema por cópia (layouts/sass no repo), como o Hitchens pede.
+  - jekyll-sitemap

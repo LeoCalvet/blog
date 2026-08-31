@@ -4,7 +4,7 @@
 
 Blog pessoal estático de Leonardo Calvet, publicado em `https://blog.calvet.dev.br`.
 
-- **Gerador:** Jekyll · **Fonte:** CaskaydiaCove Nerd Font (embutida em `assets/fonts/`, mesma do Zed do autor) · **Tema:** Hitchens (MIT — manter o `LICENSE.txt`), carregado por cópia (`_layouts/`, `_sass/`, `_includes/`) · **Cores:** paleta [Flexoki](https://stephango.com/flexoki), variante light (aplicada em `_sass/_variables.scss` e `_article.scss`; dark mode é TODO)
+- **Gerador:** Jekyll · **Fonte:** CaskaydiaCove Nerd Font (embutida em `assets/fonts/` + `assets/css/flexoki.css`; mesma família do Zed do autor) · **Tema:** Beautiful Jekyll (MIT — manter o `LICENSE`) · **Cores:** paleta [Flexoki](https://stephango.com/flexoki), variante light (aplicada no `_config.yml` + `assets/css/flexoki.css`; dark mode é TODO)
 - **Repo:** `github.com/LeoCalvet/blog` (público) · **Língua do conteúdo:** pt-BR
 - **Sem banco, sem segredos, sem `.env`** — 100% do site vive neste repo. O checkout deste repo É a pasta da aplicação no notebook (`~/Projetos/home_server_apps/blog`).
 
@@ -28,7 +28,7 @@ push em main → GitHub Actions (runner self-hosted no notebook pop-os-laptop)
 - Escrever/editar posts em `_posts/` e rascunhos em `_drafts/`
 - Editar `sobre.md`, `index.html`, `404.html`, `tags.html`
 - Ajustar `_config.yml` (título, navbar, cores, plugins)
-- Ajustar `assets/` (fontes, imagens, JS) e `_sass/` (Flexoki está nas variáveis SCSS)
+- Ajustar `assets/` (fontes, CSS Flexoki, imagens, JS)
 - Rodar preview/build local para validar
 
 ## O que o agente NÃO deve fazer
@@ -37,7 +37,7 @@ push em main → GitHub Actions (runner self-hosted no notebook pop-os-laptop)
 - NÃO mudar `compose.yaml` ou `nginx/` sem dizer que mudou: exige `docker compose up -d` no notebook pra valer
 - NÃO introduzir segredos, tokens ou chaves no repo
 - NÃO criar post com data no futuro — Jekyll não publica post datado à frente do relógio
-- O tema já vem por cópia neste repo (padrão do Hitchens); ajustes de cor ficam em `_sass/_variables.scss`, nunca espalhados pelos outros .scss
+- NÃO substituir arquivos do tema (`_layouts/`, `_includes/`) sem necessidade — o padrão é sobrescrever por cima (cópia do arquivo + ajuste), mantendo fácil o diff com o upstream
 
 ## Convenções
 

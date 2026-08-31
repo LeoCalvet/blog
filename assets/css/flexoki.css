@@ -1,0 +1,70 @@
+/* Flexoki (https://stephango.com/flexoki) + CaskaydiaCove Nerd Font.
+   Cores principais vêm do _config.yml; aqui ficam a fonte embutida e
+   o que o tema não expõe (código, seleção). */
+
+@font-face {
+  font-family: "CaskaydiaCove Nerd Font";
+  src: url("/assets/fonts/CaskaydiaCoveNerdFont-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CaskaydiaCove Nerd Font";
+  src: url("/assets/fonts/CaskaydiaCoveNerdFont-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CaskaydiaCove Nerd Font";
+  src: url("/assets/fonts/CaskaydiaCoveNerdFont-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CaskaydiaCove Nerd Font";
+  src: url("/assets/fonts/CaskaydiaCoveNerdFont-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --body-font: "CaskaydiaCove Nerd Font", "Cascadia Code", "Segoe UI", sans-serif;
+  --header-font: "CaskaydiaCove Nerd Font", "Cascadia Code", "Segoe UI", sans-serif;
+  --mid-col: #6F6E69;         /* Flexoki muted */
+  --flexoki-surface: #F2F0E5; /* Flexoki 100-light */
+  --flexoki-border: #DEDEDB;
+  --flexoki-black: #100F0F;
+}
+
+pre, code, kbd, samp {
+  font-family: "CaskaydiaCove Nerd Font", "Cascadia Code", Menlo, Consolas, monospace;
+}
+
+pre {
+  background-color: var(--flexoki-surface);
+  border: 1px solid var(--flexoki-border);
+  border-radius: 6px;
+}
+
+code {
+  background-color: var(--flexoki-surface);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+::selection {
+  background-color: #DEDEDB;
+  color: var(--flexoki-black);
+}
+
+/* TODO dark mode Flexoki (#100F0F/#1C1B1A/#CECDC3): trabalho futuro. */
