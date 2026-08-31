@@ -125,6 +125,7 @@ exclude:
   - beautiful-jekyll-theme.gemspec
   - site
   - _drafts
+  - docs
 
 plugins:
   - jekyll-paginate

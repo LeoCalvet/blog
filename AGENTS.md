@@ -37,6 +37,7 @@ push em main → GitHub Actions (runner self-hosted no notebook pop-os-laptop)
 - NÃO mudar `compose.yaml` ou `nginx/` sem dizer que mudou: exige `docker compose up -d` no notebook pra valer
 - NÃO introduzir segredos, tokens ou chaves no repo
 - NÃO criar post com data no futuro — Jekyll não publica post datado à frente do relógio
+- NÃO publicar como post conteúdo operacional/interno (fluxos, how-tos de manutenção, decisões de infra) — isso vai em `docs/` (ex.: `docs/PUBLICAR.md`), que está fora do build. Post é conteúdo para LEITORES do blog, não documentação do repositório
 - NÃO substituir arquivos do tema (`_layouts/`, `_includes/`) sem necessidade — o padrão é sobrescrever por cima (cópia do arquivo + ajuste), mantendo fácil o diff com o upstream
 
 ## Convenções

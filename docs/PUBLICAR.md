@@ -7,7 +7,7 @@ tags: [jekyll, git, workflow]
 
 Este é o primeiro post de verdade — e nada melhor do que ele documentar o próprio fluxo que o publicou. Qualquer atualização no blog segue sempre os mesmos passos.
 
-## O fluxo de sempre
+## Fluxo
 
 ```text
 1. Editar o(s) arquivo(s) .md ou de configuração
@@ -19,11 +19,11 @@ Este é o primeiro post de verdade — e nada melhor do que ele documentar o pr�
 
 O `push` em `main` dispara o GitHub Actions, que roda no meu próprio notebook: builda o Jekyll num container Ruby e publica a pasta `_site/` no nginx. Sem painel, sem banco, sem deploy manual.
 
-## Exemplo real: este commit
+## Exemplo real (31/08/2026): LinkedIn no rodapé + novo Sobre
 
-Para provar o fluxo, este mesmo push fez duas outras mudanças:
+Mudanças feitas neste dia, usadas como exemplo do fluxo:
 
-### 1. Link do LinkedIn no rodapé
+### 1. Link do LinkedIn no rodapé (`_config.yml`)
 
 O rodapé é configurado no `_config.yml`, na seção `social-network-links`:
 
@@ -36,7 +36,7 @@ social-network-links:
 
 No Beautiful Jekyll, `linkedin: leonardo-calvet` vira o link [linkedin.com/in/leonardo-calvet](https://www.linkedin.com/in/leonardo-calvet/) no rodapé, com ícone.
 
-### 2. Novo texto da página Sobre
+### 2. Novo texto da página Sobre (`sobre.md`)
 
 A página vive em `sobre.md`, Markdown puro com front matter. O texto novo:
 
@@ -44,8 +44,8 @@ A página vive em `sobre.md`, Markdown puro com front matter. O texto novo:
 >
 > Então espere de tudo: entre linguagens de programação, novas tecnologias, LLMs, filosofia e política. De tudo um pouco.
 
-## O detalhe que importa
+## Detalhe que importa
 
 O **commit não publica; o push sim**. Posso commitar quantas vezes quiser localmente, mexer, revertar, escrever em rascunho (`_drafts/`) — nada sai enquanto não houver `git push`. Quando publico, cada push pode carregar vários commits de uma vez.
 
-E é isso: um post é um arquivo `.md` em `_posts/` com a data no nome, um commit e um push.
+Um post é um arquivo `.md` em `_posts/` com data no nome, um commit e um push.
