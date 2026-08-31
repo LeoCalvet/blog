@@ -33,6 +33,7 @@ round-avatar: true
 social-network-links:
   rss: true
   github: LeoCalvet
+  linkedin: leonardo-calvet
 
 rss-description: Blog do Leonardo Calvet — Ruby, home servers e projetos pessoais
 

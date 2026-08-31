@@ -4,6 +4,6 @@ title: Sobre
 permalink: /sobre/
 ---
 
-Sou o Leonardo Calvet. Escrevo sobre o que estou aprendendo de verdade: Ruby, home servers, Docker, LLMs e projetos pessoais.
+Sou o Leonardo Calvet, desenvolvedor. Criei este blog para ser o backup dos meus delírios e ideias.
 
-Este blog é parte do experimento — todo o conteúdo é Markdown versionado no Git, gerado com Jekyll e publicado a cada push. Sem painel, sem banco, sem mágica.
+Então espere de tudo: entre linguagens de programação, novas tecnologias, LLMs, filosofia e política. De tudo um pouco.
