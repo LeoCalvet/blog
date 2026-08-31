@@ -137,6 +137,7 @@ date_format: "%d/%m/%Y"
 # Output options (more information on Jekyll's site)
 timezone: "America/Sao_Paulo"
 lang: pt-BR
+url: "https://blog.calvet.dev.br"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:slug/
