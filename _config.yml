@@ -6,7 +6,7 @@ title: Leonardo Calvet
 email: ola@calvet.dev.br
 description: >-
   Ruby, home servers e o que mais eu estiver aprendendo.
-url: "https://blog.calvet.dev.br"
+url: "http://localhost:8095"  # TODO: voltar pra https://blog.calvet.dev.br quando a rota do túnel existir
 lang: pt-BR
 timezone: "America/Sao_Paulo"
 
@@ -35,6 +35,17 @@ exclude:
   - site
   - _drafts
   - LICENSE.txt
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
 
 plugins:
   - jekyll-paginate

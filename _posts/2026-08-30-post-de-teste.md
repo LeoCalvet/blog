@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Post de teste — como o blog renderiza"
 date: 2026-08-30 22:00:00 -0300
 categories: [teste]
